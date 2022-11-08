@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2. 数 &#8212; to be a Pythonista</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Markdown Files" href="../markdown.html" />
+    <link rel="prev" title="1. 型と変数" href="1_variable.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">to be a Pythonista</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_variable.html">
+   1. 型と変数
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. 数
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/yuji96/to-be-a-Pythonista/main?urlpath=tree/docs/python/2_number.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/yuji96/to-be-a-Pythonista"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/yuji96/to-be-a-Pythonista/issues/new?title=Issue%20on%20page%20%2Fpython/2_number.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/python/2_number.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2.1. 整数
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2.2. 実数（浮動小数点数）
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   2.3. 複素数（番外編）
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   2.4. 演算
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   2.5. 計算順序
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2. 数</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2.1. 整数
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2.2. 実数（浮動小数点数）
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   2.3. 複素数（番外編）
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   2.4. 演算
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   2.5. 計算順序
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>2. 数<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<p>プログラミングといえば計算です。そのためにまず数を扱えるようになりましょう。</p>
+<section id="id2">
+<h2>2.1. 整数<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>まずは最も単純な数である <strong>整数 (int)</strong> です。ただ数値をそのまま書くだけで定義できます。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;整数&quot;</span><span class="p">,</span> <span class="mi">12345</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="mi">12345</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;負の数&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">12345</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="o">-</span><span class="mi">12345</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>整数 12345 &lt;class &#39;int&#39;&gt;
+負の数 -12345 &lt;class &#39;int&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></code> は integer の略です。</p>
+</section>
+<section id="id3">
+<h2>2.2. 実数（浮動小数点数）<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>次は <strong>実数 (float)</strong> です。これは小数のように小数点を含んだ数値を書くことで定義できます。<br />
+また、<a class="reference external" href="https://ja.wikipedia.org/wiki/%E6%8C%87%E6%95%B0%E8%A1%A8%E8%A8%98">指数表記（E表記）</a> <span class="math notranslate nohighlight">\(m \times 10^n\)</span> も使用できます。
+float は桁数に応じて表示がそのままだったり指数表記になったりします。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;小数&quot;</span><span class="p">,</span> <span class="mf">3.141592</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="mf">3.141592</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;指数表記&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.23e-3</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="o">-</span><span class="mf">1.23e-3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;アボガドロ定数&quot;</span><span class="p">,</span> <span class="mf">602214076000000000000000.0</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="mf">602214076000000000000000.0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;int は省略されない&quot;</span><span class="p">,</span> <span class="mi">602214076000000000000000</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="mi">602214076000000000000000</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>小数 3.141592 &lt;class &#39;float&#39;&gt;
+指数表記 -0.00123 &lt;class &#39;float&#39;&gt;
+アボガドロ定数 6.02214076e+23 &lt;class &#39;float&#39;&gt;
+int は省略されない 602214076000000000000000 &lt;class &#39;int&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></code> は数値を表現するアルゴリズムである <strong>浮動小数点方式</strong> の浮動 (floating) からきています。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>簡単に言うと <code class="docutils literal notranslate"><span class="pre">1.23</span></code> と <code class="docutils literal notranslate"><span class="pre">12.3</span></code> はそれぞれ「<code class="docutils literal notranslate"><span class="pre">123</span></code> の百の位」と「<code class="docutils literal notranslate"><span class="pre">123</span></code> の十の位」に小数点 (<code class="docutils literal notranslate"><span class="pre">.</span></code>) を入れたものと内部では処理されています。このように小数点が上に浮かんだり下に沈んだりすることから flaot と呼ばれています。</p>
+</div>
+</section>
+<section id="id4">
+<h2>2.3. 複素数（番外編）<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">j</span></code> を虚数単位として <code class="docutils literal notranslate"><span class="pre">a+bj</span></code> と書くことで複素数を定義することができます。使う機会が少ないので説明は割愛します。
+何らかの実装をミスして <span class="math notranslate nohighlight">\(\sqrt{~~}\)</span> の中身をマイナスにしてしまったり、音声データや生体データ処理でフーリエ変換を使ったりすると再会するかもしれません。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;複素数&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>複素数 (1+1j) &lt;class &#39;complex&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h2>2.4. 演算<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>数同士の演算は <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> のように 2 つの数字の間に算術演算子 (operator) をはさむことで表現されます（最後の符号は例外ですが）。
+Python では次のような算術演算子があります。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;足し算: 1 + 2 =&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;引き算: 3 - 4 =&quot;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;掛け算: 5 * 6 =&quot;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;割り算: 7 / 8 =&quot;</span><span class="p">,</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;商: 15 // 6 =&quot;</span><span class="p">,</span> <span class="mi">15</span> <span class="o">//</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;剰余: 15 % 6 =&quot;</span><span class="p">,</span> <span class="mi">15</span> <span class="o">%</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;累乗: 2**10 =&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;符号: -1 =&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>足し算: 1 + 2 = 3
+引き算: 3 - 4 = -1
+掛け算: 5 * 6 = 30
+割り算: 7 / 8 = 0.875
+商: 15 // 6 = 2
+剰余: 15 % 6 = 3
+累乗: 2**10 = 1024
+符号: -1 = -1
+</pre></div>
+</div>
+</div>
+</div>
+<p>割り算についての補足です。</p>
+<ul class="simple">
+<li><p><strong>Python の</strong>割り算の計算結果は float 型になります（<code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">/</span> <span class="pre">int</span> <span class="pre">-&gt;</span> <span class="pre">float</span></code>）</p></li>
+<li><p>割り切れる場合でも float 型になります</p></li>
+<li><p>商と剰余が欲しい場合は <code class="docutils literal notranslate"><span class="pre">//</span></code> と <code class="docutils literal notranslate"><span class="pre">%</span></code> を使用します</p></li>
+<li><p>ゼロで割るとエラー（<code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code>）が発生して、実行が中断されます。</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(15 = 6 * 2 + 3\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;割り切れる場合: 9 / 3 =&quot;</span><span class="p">,</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;割り切れない場合: 15 / 6 =&quot;</span><span class="p">,</span> <span class="mi">15</span> <span class="o">/</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;商: 15 // 6 =&quot;</span><span class="p">,</span> <span class="mi">15</span> <span class="o">//</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;剰余: 15 % 6 =&quot;</span><span class="p">,</span> <span class="mi">15</span> <span class="o">%</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ゼロ除算: 9 / 0 =&quot;</span><span class="p">,</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>割り切れる場合: 9 / 3 = 3.0
+割り切れない場合: 15 / 6 = 2.5
+商: 15 // 6 = 2
+剰余: 15 % 6 = 3
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;商: 15 // 6 =&quot;</span><span class="p">,</span> <span class="mi">15</span> <span class="o">//</span> <span class="mi">6</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;剰余: 15 % 6 =&quot;</span><span class="p">,</span> <span class="mi">15</span> <span class="o">%</span> <span class="mi">6</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ゼロ除算: 9 / 0 =&quot;</span><span class="p">,</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>言語によって割り算の扱いは異なります。</p>
+<ul class="simple">
+<li><p>C 言語 では小数部分が切り捨てられ <code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">/</span> <span class="pre">8</span> <span class="pre">-&gt;</span> <span class="pre">0</span></code> となる。</p></li>
+<li><p>Mathematica では分数を扱うことができるので <code class="docutils literal notranslate"><span class="pre">7/8</span></code> は計算せずそのまま <code class="docutils literal notranslate"><span class="pre">7/8</span></code> となる。</p></li>
+</ul>
+</div>
+<blockquote>
+<div><p>かなり昔にイージス巡洋艦ヨークタウンは、ゼロ除算が原因で2時間半航行不能になったことがある。
+<a class="reference external" href="https://ja.wikipedia.org/wiki/%E3%83%A8%E3%83%BC%E3%82%AF%E3%82%BF%E3%82%A6%E3%83%B3_(%E3%83%9F%E3%82%B5%E3%82%A4%E3%83%AB%E5%B7%A1%E6%B4%8B%E8%89%A6)">ヨークタウン</a></p>
+</div></blockquote>
+<p>ここで数を int ではなく float にすると少し結果が変わります。（<code class="docutils literal notranslate"><span class="pre">1.0</span></code> のように小数部分が <code class="docutils literal notranslate"><span class="pre">0</span></code> の場合は <code class="docutils literal notranslate"><span class="pre">1.</span></code> のように省略することができます。）</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;足し算: 1. + 2. =&quot;</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">+</span> <span class="mf">2.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;引き算: 3. - 4. =&quot;</span><span class="p">,</span> <span class="mf">3.</span> <span class="o">-</span> <span class="mf">4.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;掛け算: 5. * 6. =&quot;</span><span class="p">,</span> <span class="mf">5.</span> <span class="o">*</span> <span class="mf">6.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;割り算: 7. / 8. =&quot;</span><span class="p">,</span> <span class="mf">7.</span> <span class="o">/</span> <span class="mf">8.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;商: 15. // 6. =&quot;</span><span class="p">,</span> <span class="mf">15.</span> <span class="o">//</span> <span class="mf">6.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;剰余: 15. % 6. =&quot;</span><span class="p">,</span> <span class="mf">15.</span> <span class="o">%</span> <span class="mf">6.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;累乗: 2.**10. =&quot;</span><span class="p">,</span> <span class="mf">2.</span><span class="o">**</span><span class="mf">10.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;符号: -1. =&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>足し算: 1. + 2. = 3.0
+引き算: 3. - 4. = -1.0
+掛け算: 5. * 6. = 30.0
+割り算: 7. / 8. = 0.875
+商: 15. // 6. = 2.0
+剰余: 15. % 6. = 3.0
+累乗: 2.**10. = 1024.0
+符号: -1. = -1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>何が変わったか分かりましたか？正解は、返り値も int から float に変わりました。</p>
+<div class="admonition-quiz admonition">
+<p class="admonition-title">Quiz</p>
+<p>一方を int にしてもう一方を float にするとどうなるでしょうか。</p>
+</div>
+<p>ちなみに、累乗 <span class="math notranslate nohighlight">\(a^n\)</span> の指数 <span class="math notranslate nohighlight">\(n\)</span> は正の整数ではなく、ゼロ・負の数・実数にすることもできます。</p>
+<div class="math notranslate nohighlight">
+\[
+a^{0} = 1 ,~~ a^{-n} = \dfrac{1}{a^n} ,~~ a^{1/n} = \sqrt[n]{a}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ゼロ乗は常に 1: 2**0 =&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;マイナス n 乗は分母の n 乗: 2**-1 =&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**-</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1/n 乗は n 重根（つまり、1/2 乗は平方根）: 2**0.5 =&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ゼロ乗は常に 1: 2**0 = 1
+マイナス n 乗は分母の n 乗: 2**-1 = 0.5
+1/n 乗は n 重根（つまり、1/2 乗は平方根）: 2**0.5 = 1.4142135623730951
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(n\)</span> が float 型のときに <span class="math notranslate nohighlight">\(a\)</span> が負の数だと結果が複素数になることがあります。（早い再開でしたね。）</p>
+<div class="math notranslate nohighlight">
+\[
+(-a)^{1/2} = \sqrt{-a} = \sqrt{a}j
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6.123233995736766e-17+1j)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><span class="math notranslate nohighlight">\(\sqrt{-1} = 1j\)</span> ですが、厳密に <code class="docutils literal notranslate"><span class="pre">1j</span></code> とはなりませんでした。プログラミングは厳密な数学的計算をしているわけではないのでよくあることです。
+<code class="docutils literal notranslate"><span class="pre">6.123...e-17</span></code> はほぼゼロなので今回は許してあげてください。</p>
+<p>話が脱線しますが、このような計算誤差を減らして精度の良い近似解を得ることを目的とした <a class="reference external" href="https://ja.wikipedia.org/wiki/%E6%95%B0%E5%80%A4%E8%A7%A3%E6%9E%90">数値解析</a> という分野があります。もしこの数式が木星に飛んでいくロケットの中にあったら無視してはいけないかもしれません。</p>
+</div>
+</section>
+<section id="id6">
+<h2>2.5. 計算順序<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p><span class="math notranslate nohighlight">\(x^2 - 2x - 15 = 0\)</span> の解は？</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="o">-</span><span class="mi">15</span>
+<span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="p">(</span><span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-3.0, 5.0)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1_variable.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">1. 型と変数</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../markdown.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Markdown Files</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By yuji yamamoto<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
