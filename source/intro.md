@@ -1,16 +1,20 @@
 # Welcome to your Jupyter Book
 
-This is a small sample book to give you a feel for how book content is
-structured.
+## 入出力の見方
 
-:::{note}
-Here is a note!
-:::
-
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.
+<div class="cell docutils container">
+  <div class="cell_input docutils container">
+    <div class="highlight-ipython3 notranslate">
+      <div class="highlight">
+        <pre><span></span>この枠内に、プログラムのコードが表示されます。</pre>
+      </div>
+    </div>
+  </div>
+  <div class="cell_output docutils container">
+    <div class="output stream highlight-myst-ansi notranslate">
+      <div class="highlight">
+        <pre id="codecell1"><span></span>この枠内に、上のプログラムの出力が表示されます。</pre>
+      </div>
+    </div>
+  </div>
+</div>

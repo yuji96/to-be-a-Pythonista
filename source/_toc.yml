@@ -3,8 +3,13 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: python/1_variable
-- file: python/2_number
-- file: markdown
-- file: notebooks
+parts:
+  - caption: Python
+    chapters:
+      - file: python/1_type
+      - file: python/2_number
+  - caption: 線形代数
+    chapters:
+      - file: linalg/dot
+  # - file: markdown
+  # - file: notebooks
