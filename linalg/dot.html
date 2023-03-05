@@ -58,6 +58,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'linalg/dot';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -495,7 +497,7 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <section id="id1">
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>線形変換<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>大抵の線形代数の教科書は行列や行列の演算の定義から始まりますが、プログラミング</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ltFl0FpLTzQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="cell docutils container">
@@ -537,11 +539,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{ cc}
-1.23 &amp;   23.46\  456.23 &amp;    8.24
-\end{array}
-$$</p>
+    1.23 &amp;   23.46\\  456.23 &amp;    8.24
+    \end{array}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp</span> <span class="o">=</span> <span class="n">Math</span><span class="p">(</span><span class="n">latex</span><span class="p">)</span>
